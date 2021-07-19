@@ -1,0 +1,17 @@
+// Mixin
+
+@mixin off-margin {
+  margin: 0;
+}
+
+@mixin off-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+@mixin button {
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
