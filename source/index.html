@@ -1,20 +1,86 @@
 <!DOCTYPE html>
-<html class="page" lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Компания Smart Device предоставляет мировые технологии с 1997 года. На данном сайте можно сделать заказ печатных плат с нашего производства, так же оказывываем следующие услуги: монтаж печатных плат, поставка комплектующих, блоков и модулей.">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Умные технологии</title>
-  <link rel="preload" href="css/style.min.css" as="style">
-  <link rel="preload" href="js/main.js" as="script">
-  <link rel="preload" href="fonts/pt-mono-v8-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/pt-mono-v8-latin_cyrillic-regular.woff" as="font" type="font/woff" crossorigin>
-  <link rel="preload" href="fonts/roboto-condensed-v19-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/roboto-condensed-v19-latin_cyrillic-regular.woff" as="font" type="font/woff" crossorigin>
-  <link rel="stylesheet" type="text/css" href="css/style.min.css">
-</head>
-<body>
-  <h1>Добро пожаловать в Лигу А.</h1>
-</body>
+<html lang="ru">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Компания Smart Device предоставляет мировые технологии с 1997 года. На данном сайте можно сделать заказ печатных плат с нашего производства, так же оказывываем следующие услуги: монтаж печатных плат, поставка комплектующих, блоков и модулей.">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Умные технологии</title>
+
+    <link rel="preload" href="css/style.min.css" as="style">
+    <link rel="preload" href="js/main.js" as="script">
+    <link rel="preload" href="fonts/pt-mono-v8-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/pt-mono-v8-latin_cyrillic-regular.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="fonts/roboto-condensed-v19-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/roboto-condensed-v19-latin_cyrillic-regular.woff" as="font" type="font/woff" crossorigin>
+
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
+
+  </head>
+
+  <body>
+
+    <div class="wrapper">
+
+      <header class="header">
+        <div class="container">
+          <div class="header__wrap-row">
+            <a href="index.html" class="header__logo-link">
+              <picture>
+                <source media="(max-width: 768px)" srcset="img/logo-mobile.svg">
+                <img src="img/logo.svg" width="202" height="52" alt="Логотип Smart Device">
+              </picture>
+            </a>
+            <div class="header__contacts">
+              <div class="header__contacts-wrap">
+                <div class="header__contacts-mail">
+                  <span class="visually-hidden">Почта</span>
+                  <svg width="19" height="14" aria-hidden="true" focusable="false">
+                    <use xlink:href="img/sprite_auto.svg#icon-mail"></use>
+                  </svg>
+                  <a class="header__contacts-mail-link" href="mailto:info@sd.ru">info@sd.ru</a>
+                </div>
+                <div class="header__contacts-phone">
+                  <span class="visually-hidden">Телефон</span>
+                  <svg width="18" height="18" aria-hidden="true" focusable="false">
+                    <use xlink:href="img/sprite_auto.svg#icon-phone"></use>
+                  </svg>
+                  <a class="header__contacts-phone-link" href="tel:+74950005252">+7 (495) 000 52 52</a>
+                </div>
+              </div>
+              <a class="header__contacts-call-link" href="#">Заказать звонок</a>
+            </div>
+          </div>
+          <div class="header__wrap-row banner">
+            <div class="banner__content">
+              <h1>Печатные платы</h1>
+              <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
+              <a href="#" class="banner__consultation-link">
+                <span>Получить бесплатную консультацию</span>
+                <span>Бесплатная консультация</span>
+              </a>
+              <a href="#" class="banner__scroll-down-link">Скролл вниз</a>
+            </div>
+            <div class="banner__img">
+              <picture>
+                <source type="image/webp" srcset="img/card-desktop.webp 1x, img/card-desktop@2x.webp 2x">
+                <!-- 1х: 705px*515px; 2x: 1410px*1030px -->
+                <img src="img/card-desktop.png" srcset="img/card-desktop@2x.png 2x" width="705" height="515" alt="На картинке изображено 5 печатных плат синего цвета с микросхемами">
+              </picture>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="main">main</main>
+
+      <footer class="footer">footer</footer>
+
+    </div>
+
+  </body>
+
 </html>

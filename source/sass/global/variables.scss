@@ -1,28 +1,27 @@
 // Variables
 
-$color-white: rgba(255, 255, 255, 1);
-$color-white-opacity-10-percent: rgba(255, 255, 255, 0.1);
-$color-white-opacity-50-percent: rgba(255, 255, 255, 0.5);
-$color-white-opacity-80-percent: rgba(255, 255, 255, 0.8);
+$background-header: rgba(27, 45, 55, 1);
 
-$color-blue: rgba(0, 178, 255, 1);
+$white: rgba(255, 255, 255, 1);
+$white-opacity-10-percent: rgba(255, 255, 255, 0.1);
+$white-opacity-50-percent: rgba(255, 255, 255, 0.5);
+$white-opacity-80-percent: rgba(255, 255, 255, 0.8);
 
-$color-logo-text-translation: rgba(120, 136, 145, 1);
+$blue: rgba(0, 178, 255, 1);
 
-$color-main-text: rgba(102, 102, 102, 1);
-$color-advantages-border: rgba(235, 235, 235, 1);
+$main-text: rgba(102, 102, 102, 1);
+$advantages-border: rgba(235, 235, 235, 1);
 
-
-$color-footer-logo-text: rgba(32, 60, 66, 1);
-$color-footer-text: rgba(27, 45, 55, 1);
-$color-footer-text-opacity-50-percent: rgba(27, 45, 55, 0.5);
-$color-footer-social-background: rgba(205, 205, 205, 1);
+$footer-text: rgba(27, 45, 55, 1);
+$footer-text-opacity-50-percent: rgba(27, 45, 55, 0.5);
+$footer-social-background: rgba(205, 205, 205, 1);
 
 
 // Viewports
 
 $desktop-width: 1920px;
-$desktop-content-width: 1170px;
+$desktop-content-width: 1570px;
+$desktop-content-main-width: 1170px;
 $tablet-max-width: 1023px;
 $tablet-width: 768px;
 $mobile-max-width: 767px;

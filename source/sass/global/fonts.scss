@@ -21,17 +21,6 @@
   font-display: swap;
 }
 
-/* roboto-500 - latin_cyrillic */
-@font-face {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 500;
-  src:
-    url("../fonts/roboto-v27-latin_cyrillic-500.woff2") format("woff2"), /* Super Modern Browsers */
-    url("../fonts/roboto-v27-latin_cyrillic-500.woff") format("woff"); /* Modern Browsers */
-  font-display: swap;
-}
-
 /* pt-mono-regular - latin_cyrillic */
 @font-face {
   font-family: "PT Mono";
