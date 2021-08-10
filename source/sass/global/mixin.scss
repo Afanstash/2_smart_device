@@ -10,8 +10,72 @@
   list-style-type: none;
 }
 
-@mixin button {
+@mixin button($font-size, $line-height, $background-color, $color) {
   padding: 0;
   border: none;
   cursor: pointer;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: $font-size;
+  line-height: $line-height;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $color;
+  background-color: $background-color;
+  border-radius: 5px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin fonts-title {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@mixin h2-title($color) {
+  font-size: 36px;
+  line-height: 51px;
+  color: $color;
+
+  @media (max-width: $tablet-max-width) {
+    font-size: 32px;
+    line-height: 140.62%;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    font-size: 28px;
+  }
+}
+
+@mixin another-title-or-text($font-size, $line-height, $color) {
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $color;
+}
+
+@mixin footer-title {
+  font-size: 15px;
+  line-height: 16px;
+  color: $footer-text;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+@mixin input-or-textarea {
+  padding: 14px 17px;
+  font-family: inherit;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 22px;
+  background-color: $white-opacity-10-percent;
+  border: transparent;
+
+  &::placeholder {
+    color: $white;
+  }
 }
