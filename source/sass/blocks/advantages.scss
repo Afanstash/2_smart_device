@@ -1,0 +1,125 @@
+.advantages {
+  padding: 112px 0 0;
+
+  @media (max-width: $tablet-max-width) {
+    padding: 54px 25px 0;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding: 37px 16px 0 14px;
+  }
+}
+
+.advantages__list {
+  @include off-list;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 1fr;
+  grid-gap: 30px;
+
+  @media (max-width: $tablet-max-width) {
+    grid-auto-rows: auto;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    grid-template-columns: 1fr;
+    grid-row-gap: 20px;
+  }
+}
+
+.advantages__item {
+  padding: 40px 42px 49px;
+  background-color: $white;
+  border: 1px solid $advantages-border;
+  border-left: 3px solid $blue;
+
+  &:hover,
+  &:focus {
+    border-color: $blue;
+    background-color: $blue;
+    color: $white;
+    cursor: pointer;
+    fill: $black;
+  }
+
+  @media (max-width: $tablet-max-width) {
+    padding: 21px 21px 5px 24px;
+    min-height: 232px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding: 21px 10px 9px 24px;
+  }
+}
+
+.advantages__icon {
+  margin-bottom: 13px;
+
+  @media (max-width: $tablet-max-width) {
+    margin-bottom: 2px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 8px;
+  }
+
+  &--additional-margin-bottom {
+    margin-bottom: 17px;
+
+    @media (max-width: $tablet-max-width) {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.advantages__icon--additional-margin-bottom svg {
+  @media (max-width: $tablet-max-width) {
+    width: 31px;
+    height: 32px;
+  }
+}
+
+.advantages__item h3 {
+  @include off-margin;
+  @include fonts-title;
+  @include another-title-or-text(24px, 34px, $blue);
+  margin-bottom: 16px;
+
+  @media (max-width: $tablet-max-width) {
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    font-size: 20px;
+    line-height: 140.62%;
+  }
+}
+
+.advantages__item:hover h3,
+.advantages__item:focus h3 {
+  color: $white;
+}
+
+.advantages__item span {
+  display: inline-block;
+  vertical-align: top;
+  width: 10px;
+
+  @media (max-width: $tablet-max-width) {
+    display: none;
+  }
+}
+
+
+.advantages__item p {
+  @include off-margin;
+  margin-bottom: 14px;
+}
+
+.advantages__item br {
+  display: none;
+
+  @media (max-width: $mobile-max-width) {
+    display: block;
+  }
+}
