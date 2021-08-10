@@ -1,0 +1,143 @@
+.products {
+  padding: 88px 0 127px;
+  background-color: $background;
+
+  @media (max-width: $tablet-max-width) {
+    padding: 50px 24px 77px 26px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding: 50px 15px 64px;
+  }
+}
+
+.products h2 {
+  @include fonts-title;
+  @include h2-title($white);
+  @include off-margin;
+  margin-bottom: 52px;
+
+  @media (max-width: $tablet-max-width) {
+    width: 613px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    margin: 0 0 42px 10px;
+    width: 280px;
+  }
+}
+
+.products__list {
+  @include off-list;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 30px;
+
+  @media (max-width: $tablet-max-width) {
+    grid-template-columns: 1fr;
+    grid-gap: 46px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    grid-gap: 30px;
+  }
+}
+
+.products__item {
+  padding-top: 50px;
+  height: 620px;
+  position: relative;
+  display: grid;
+  grid-template: minmax(60px, auto) 1fr 63px / 1fr;
+  grid-template-areas: "header" "content" "link";
+
+  @media (max-width: $tablet-max-width) {
+    padding-top: 39px;
+    height: 256px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding-top: 20px;
+  }
+
+  &:last-child {
+    @media (max-width: $tablet-max-width) {
+      padding-top: 49px;
+    }
+
+    @media (max-width: $mobile-max-width) {
+      padding-top: 30px;
+    }
+  }
+}
+
+.products h3 {
+  @include fonts-title;
+  @include another-title-or-text(20px, 30px, $white);
+  margin: 0 44px;
+  grid-area: header;
+
+  @media (max-width: $mobile-max-width) {
+    margin: 0 35px;
+  }
+}
+
+.products__img {
+  grid-area: content;
+}
+
+.products__img img {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.products__link {
+  grid-area: link;
+  justify-self: flex-end;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 63px;
+  height: 63px;
+  background-color: $blue;
+  z-index: 2;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+
+    &::before {
+      background-color: $black;
+      opacity: 0.3;
+    }
+  }
+
+  &:active {
+    background-color: $white-opacity-80-percent;
+  }
+
+  &:focus-visible {
+    outline: none;
+
+    &::before {
+      outline: 2px solid $black;
+      outline-offset: -2px;
+    }
+  }
+}
