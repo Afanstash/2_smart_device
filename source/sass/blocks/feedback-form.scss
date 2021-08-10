@@ -1,0 +1,83 @@
+.feedback-form {
+  padding: 91px 0 113px;
+  background-color: $blue;
+
+  @media (max-width: $tablet-max-width) {
+    padding: 80px 87px 104px 92px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding: 30px 15px 42px;
+  }
+}
+
+.feedback-form__row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  grid-column-gap: 30px;
+  align-items: center;
+
+  @media (max-width: $tablet-max-width) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.feedback-form__img {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: -259px;
+    right: 99px;
+    width: 671px;
+    height: 641px;
+    background-image: url("../img/polygon-for-airplane.svg");
+  }
+
+  @media (max-width: $tablet-max-width) {
+    display: none;
+  }
+}
+
+.feedback-form__img img {
+  display: block;
+  margin: -38px 0 0 -25px;
+}
+
+.feedback-form__form-wrap {
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: $tablet-max-width) {
+    margin-left: 0;
+    flex: 1 1 auto;
+  }
+}
+
+.feedback-form__form-wrap h2 {
+  @include fonts-title;
+  @include h2-title($white);
+  margin: 0 0 10px -4px;
+
+  @media (max-width: $tablet-max-width) {
+    margin-bottom: 17px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    margin-left: 0;
+    margin-bottom: 13px;
+  }
+}
+
+.feedback-form__form-wrap p {
+  @include off-margin;
+  @include another-title-or-text(16px, 22px, $white);
+  margin-bottom: 51px;
+
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 25px;
+  }
+}

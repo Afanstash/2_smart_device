@@ -1,0 +1,172 @@
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  column-gap: 30px;
+  flex: 1 1 auto;
+
+  @media (max-width: $mobile-max-width) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.form__field {
+  display: flex;
+  margin-bottom: 40px;
+
+  @media (max-width: $tablet-max-width) {
+    margin-bottom: 44px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 32px;
+  }
+}
+
+.form__field input {
+  @include input-or-textarea;
+  flex: 1 1 auto;
+
+  &:hover,
+  &:focus {
+    background-color: $white;
+    color: $black;
+  }
+
+  &:hover::placeholder,
+  &:focus::placeholder {
+    color: $black;
+  }
+}
+
+.form__textarea {
+  grid-column: 1 / -1;
+  grid-row: 2 / 3;
+  display: flex;
+  margin-bottom: 43px;
+
+  @media (max-width: $tablet-max-width) {
+    margin-bottom: 47px;
+    height: 160px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 32px;
+    height: 104px;
+  }
+}
+
+.form__textarea textarea {
+  @include input-or-textarea;
+  flex: 1 1 auto;
+  height: 154px;
+
+  &:hover,
+  &:focus {
+    background-color: $white;
+    color: $black;
+  }
+
+  &:hover::placeholder,
+  &:focus::placeholder {
+    color: $black;
+  }
+
+  @media (max-width: $tablet-max-width) {
+    height: 160px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    height: 104px;
+  }
+}
+
+.form__button {
+  @include button(14px, 16px, transparent, $white);
+  border: 1px solid $white;
+  padding: 8px 19px 8px 18px;
+  min-height: 45px;
+
+  &:hover,
+  &:focus {
+    background-color: $white;
+    color: $black;
+  }
+
+  &:active {
+    background-color: $white-opacity-80-percent;
+    color: $white;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 23px;
+  }
+}
+
+.form__agreement {
+  @media (max-width: $mobile-max-width) {
+    margin-left: -7px;
+  }
+}
+
+.form__agreement input {
+  & + label::before {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: 8px;
+    width: 17px;
+    height: 16px;
+    background-image: url("../img/form-off.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+
+  &:checked + label::before {
+    background-image: url("../img/form-ok.svg");
+  }
+
+  &:hover + label::before,
+  &:focus + label::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='17' height='16' viewBox='0 0 17 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.78125' y='0.5' width='15' height='15' stroke='black'/%3E%3C/svg%3E");
+  }
+
+  &:checked:hover + label::before,
+  &:checked:focus + label::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='17' height='16' viewBox='0 0 17 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.78125' y='0.5' width='15' height='15' stroke='black'/%3E%3Cpath d='M4.9873 6.66667L7.99907 10L12.5167 5' stroke='black'/%3E%3C/svg%3E");
+  }
+
+  &:active + label::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='17' height='16' viewBox='0 0 17 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.78125' y='0.5' width='15' height='15' stroke='%2300B2FF'/%3E%3C/svg%3E");
+  }
+
+  &:disabled + label::before {
+    opacity: 0.2;
+  }
+
+  &:checked:active + label::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='17' height='16' viewBox='0 0 17 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.78125' y='0.5' width='15' height='15' stroke='%2300B2FF'/%3E%3Cpath d='M4.9873 6.66667L7.99907 10L12.5167 5' stroke='%2300B2FF'/%3E%3C/svg%3E");
+  }
+
+  &:checked:disabled + label::before {
+    opacity: 0.2;
+  }
+}
+
+.form__agreement label {
+  @include another-title-or-text(14px, 16px, $white-opacity-80-percent);
+  padding: 8px 0 0 40px;
+  display: block;
+  position: relative;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $black;
+  }
+
+  &:active {
+    color: $blue;
+  }
+}
