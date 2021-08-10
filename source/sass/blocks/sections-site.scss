@@ -1,0 +1,101 @@
+.sections-site {
+  padding: 0 26px 0 68px;
+
+  @media (max-width: $tablet-max-width) {
+    padding: 0 25px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 28px;
+    padding: 0 15px;
+    border-bottom: 1px solid $footer-border;
+  }
+}
+
+.sections-site h2 {
+  @include fonts-title;
+  @include another-title-or-text(15px, 16px, $footer-text);
+  @include off-margin;
+  margin-bottom: 25px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 27px;
+    position: relative;
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      width: 16px;
+      height: 1px;
+      background-color: $footer-cross;
+      top: 8px;
+      right: 2px;
+    }
+
+    &::after {
+      transform: rotate(90deg);
+    }
+
+    &:hover::before,
+    &:focus::before,
+    &:hover::after,
+    &:focus::after {
+      background-color: $black;
+    }
+
+    &:active::before,
+    &:active::after {
+      background-color: $white;
+    }
+  }
+}
+
+.sections-site__list {
+  @include off-list;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 100px;
+
+  @media (max-width: $tablet-max-width) {
+    height: auto;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    display: none;
+  }
+}
+
+.sections-site__item {
+  width: 243px;
+  margin-right: 5px;
+}
+
+.sections-site__link {
+  @include off-margin;
+  @include another-title-or-text(15px, 25px, $footer-text);
+  opacity: 0.5;
+  display: inline-block;
+  vertical-align: top;
+
+  &--letter-spacing {
+    letter-spacing: 0.03em;
+
+    @media (max-width: $tablet-max-width) {
+      letter-spacing: normal;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    color: $black;
+    opacity: 1;
+  }
+
+  &:active {
+    color: $white;
+  }
+}

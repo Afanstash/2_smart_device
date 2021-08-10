@@ -1,0 +1,109 @@
+.footer {
+  padding: 65px 0 0;
+  background-color: $footer-background;
+
+  @media (max-width: $tablet-max-width) {
+    padding: 19px 0 0;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding: 46px 0 0;
+  }
+}
+
+.footer__content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  margin-bottom: 58px;
+
+  @media (max-width: $tablet-max-width) {
+    margin-bottom: 36px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+  }
+
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 26px;
+    grid-template-columns: 1fr;
+  }
+}
+
+.footer__block {
+  grid-column: 1 / 2;
+  grid-row: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media (max-width: $tablet-max-width) {
+    margin-bottom: 38px;
+    padding: 0 25px 21px;
+    flex-direction: row;
+    align-items: center;
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    border-bottom: 1px solid $footer-border;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 29px;
+    padding: 0 25px 45px;
+    flex-direction: column;
+  }
+}
+
+.footer__logo-link {
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 22px;
+  }
+}
+
+.footer__block p {
+  @include off-margin;
+  @include another-title-or-text(13px, 24px, $footer-text);
+  display: none;
+  opacity: 0.5;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  @media (max-width: $tablet-max-width) {
+    display: block;
+    margin-left: 13px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    margin-left: 0;
+    margin-bottom: 31px;
+  }
+}
+
+.footer__sections {
+  grid-column: 2 / 4;
+  grid-row: 1 / -1;
+
+  @media (max-width: $tablet-max-width) {
+    grid-column: 1 / 2;
+    grid-row: 2 / -1;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+  }
+}
+
+.footer__our-office {
+  grid-column: 4 / -1;
+  grid-row: 1 / -1;
+
+  @media (max-width: $tablet-max-width) {
+    grid-column: 2 / -1;
+    grid-row: 2 / -1;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    grid-column: 1 / -1;
+    grid-row: 3 / -1;
+  }
+}

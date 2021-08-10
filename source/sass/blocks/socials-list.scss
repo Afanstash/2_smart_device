@@ -1,0 +1,25 @@
+.socials-list {
+  @include off-list;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.socials-list__item {
+  margin: 0 15px 5px 0;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.socials-list__img {
+  &:hover,
+  &:focus {
+    fill: $black;
+  }
+
+  &:active {
+    fill: $white;
+  }
+}
