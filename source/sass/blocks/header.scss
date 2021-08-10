@@ -2,10 +2,10 @@
   padding-top: 31px;
   min-height: 878px;
   color: $white;
-  background-color: $background-header;
+  background-color: $background;
   background-image: url("../img/background-header.png");
   background-repeat: no-repeat;
-  background-position: -6px 1px;
+  background-position: -14px 1px;
   background-size: cover;
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
@@ -40,7 +40,7 @@
 }
 
 .header__logo-link {
-  margin-left: 85px;
+  margin-left: 78px;
   flex: 0 0 202px;
 
   @media (max-width: $tablet-max-width) {
@@ -124,6 +124,15 @@
   color: $white;
   font-size: 16px;
   line-height: 18px;
+
+  &:hover,
+  &:focus {
+    color: $black;
+  }
+
+  &:active {
+    color: $white;
+  }
 }
 
 .header__contacts-mail-link {
@@ -143,22 +152,22 @@
 }
 
 .header__contacts-call-link {
-  margin-right: 73px;
+  @include button(14px, 16px, transparent, $white);
+  margin-right: 82px;
   padding: 14px 26px 13px 26px;
   flex-shrink: 1;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  font-family: "Roboto Condensed", "Arial", sans-serif;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: $white;
-  background-color: transparent;
   border: 1px solid $white;
-  border-radius: 5px;
+
+  &:hover,
+  &:focus {
+    background-color: $white;
+    color: $black;
+  }
+
+  &:active {
+    background-color: $white-opacity-80-percent;
+    color: $white;
+  }
 
   @media (max-width: $tablet-max-width) {
     display: none;

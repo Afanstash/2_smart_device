@@ -13,7 +13,7 @@
 }
 
 .banner__content {
-  padding: 0 20px 0 82px;
+  padding: 0 20px 0 74px;
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;
@@ -92,7 +92,7 @@
 
 .banner__img {
   margin-top: -5px;
-  margin-right: -6px;
+  margin-right: 2px;
   flex: 0 0 705px;
 
   @media (max-width: $tablet-max-width) {
@@ -116,25 +116,22 @@
 }
 
 .banner__consultation-link {
+  @include button(16px, 19px, $blue, $white);
   padding: 14px 28px;
   margin: 0 0 66px 98px;
   max-width: 407px;
   height: 55px;
-  font-family: "Roboto Condensed", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 19px;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: $white;
-  background-color: $blue;
-  border-radius: 5px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+
+  &:hover,
+  &:focus {
+    background-color: $white;
+    color: $black;
+  }
+
+  &:active {
+    background-color: $white-opacity-80-percent;
+    color: $white;
+  }
 
   @media (max-width: $tablet-max-width) {
     margin: 0 -23px 0 0;
@@ -173,6 +170,15 @@
   transform: rotate(-90deg);
   font-size: 14px;
   line-height: 16px;
+
+  &:hover,
+  &:focus {
+    color: $black;
+  }
+
+  &:active {
+    color: $white;
+  }
 
   @media (max-width: $tablet-max-width) {
     display: none;
