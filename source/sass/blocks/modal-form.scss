@@ -1,0 +1,93 @@
+.modal-form {
+  margin: 0 auto;
+  padding: 20px;
+  background-color: $blue;
+  color: $white;
+  width: 490px;
+  min-height: 605px;
+  display: flex;
+  flex-direction: column;
+
+  &--position {
+    position: fixed;
+    z-index: 10;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 439px;
+  }
+
+  &--hidden {
+    display: none;
+  }
+
+  &--show {
+    display: flex;
+  }
+}
+
+.modal-form h2 {
+  @include fonts-title;
+  margin: 0 0 12px 19px;
+  font-size: 28px;
+  line-height: 140.62%;
+}
+
+.modal-form p {
+  margin: 0 30px 32px 19px;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.modal-form__form {
+  padding: 0 19px;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-form input {
+  padding: 14px 24px;
+  height: 52px;
+}
+
+.modal-form textarea {
+  padding: 14px 24px;
+  height: 104px;
+}
+
+.modal-form__button-close {
+  @include button(16px, 22px, transparent, $white);
+  align-self: flex-end;
+  margin-bottom: -8px;
+  width: 17px;
+  height: 17px;
+
+  &:hover,
+  &:focus {
+    background-color: $black;
+    opacity: 0.5;
+  }
+
+  &:active {
+    background-color: $white;
+  }
+}
+
+.modal-form .form__field {
+  margin-bottom: 30px;
+}
+
+.modal-form .form__textarea {
+  margin-bottom: 32px;
+}
+
+.modal-form .form__button {
+  margin-bottom: 26px;
+}
+
+.modal-form .form__agreement {
+  margin-left: -8px;
+}
+
+.modal-form .form__agreement label {
+  padding: 8px 20px 0 56px;
+}
