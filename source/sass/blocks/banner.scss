@@ -1,12 +1,15 @@
 .banner {
   padding-top: 176px;
+  min-height: 760px;
 
   @media (max-width: $tablet-max-width) {
     padding-top: 42px;
+    min-height: 579px;
   }
 
   @media (max-width: $mobile-max-width) {
     padding-top: 34px;
+    min-height: 558px;
     align-items: center;
     flex-direction: column;
   }
@@ -46,9 +49,12 @@
   }
 
   @media (max-width: $mobile-max-width) {
+    width: 211px;
     margin: 0 0 26px 3px;
     font-size: 40px;
     line-height: 47px;
+    position: relative;
+    z-index: 3;
   }
 }
 
@@ -94,6 +100,7 @@
   margin-top: -5px;
   margin-right: 2px;
   flex: 0 0 705px;
+  position: relative;
 
   @media (max-width: $tablet-max-width) {
     flex-basis: 465px;
@@ -103,15 +110,45 @@
     margin: 0;
     flex-basis: 301px;
   }
+
+  &::before {
+    position: absolute;
+    content: "";
+    bottom: 88px;
+    left: -8px;
+    width: 671px;
+    height: 641px;
+    background-image: url("../img/background-card.svg");
+    z-index: 1;
+
+    @media (max-width: $tablet-max-width) {
+      bottom: 189px;
+      left: -70px;
+      width: 529px;
+      height: 506px;
+      background-image: url("../img/background-card-tablet.svg");
+    }
+
+    @media (max-width: $mobile-max-width) {
+      bottom: -44px;
+      left: 151px;
+      width: 506px;
+      height: 484px;
+      background-image: url("../img/background-card-mobile.svg");
+    }
+  }
 }
 
 .banner__img img {
   display: block;
+  position: absolute;
+  z-index: 2;
 
   @media (max-width: $mobile-max-width) {
     margin-left: 26px;
     width: 301px;
     height: 220px;
+    position: relative;
   }
 }
 
@@ -162,18 +199,17 @@
 
 .banner__scroll-down-link {
   align-self: flex-start;
-  margin: 0 0 20px 4px;
+  margin: 52px 0 0 -48px;
   color: $white-opacity-50-percent;
   display: block;
   width: 120px;
-  height: 120px;
   transform: rotate(-90deg);
   font-size: 14px;
   line-height: 16px;
 
   &:hover,
   &:focus {
-    color: $black;
+    color: $blue;
   }
 
   &:active {

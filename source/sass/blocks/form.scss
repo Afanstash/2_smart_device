@@ -61,6 +61,7 @@
   @include input-or-textarea;
   flex: 1 1 auto;
   height: 154px;
+  resize: none;
 
   &:hover,
   &:focus {
@@ -132,25 +133,34 @@
     background-image: url("data:image/svg+xml,%3Csvg width='17' height='16' viewBox='0 0 17 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.78125' y='0.5' width='15' height='15' stroke='black'/%3E%3C/svg%3E");
   }
 
+  &:hover + label,
+  &:focus + label {
+    color: $black;
+  }
+
   &:checked:hover + label::before,
   &:checked:focus + label::before {
     background-image: url("data:image/svg+xml,%3Csvg width='17' height='16' viewBox='0 0 17 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.78125' y='0.5' width='15' height='15' stroke='black'/%3E%3Cpath d='M4.9873 6.66667L7.99907 10L12.5167 5' stroke='black'/%3E%3C/svg%3E");
   }
 
   &:active + label::before {
-    background-image: url("data:image/svg+xml,%3Csvg width='17' height='16' viewBox='0 0 17 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.78125' y='0.5' width='15' height='15' stroke='%2300B2FF'/%3E%3C/svg%3E");
+    background-image: url("../img/form-off.svg");
   }
 
-  &:disabled + label::before {
-    opacity: 0.2;
+  &:active + label {
+    color: $white;
+  }
+
+  &:disabled + label {
+    opacity: 0.5;
   }
 
   &:checked:active + label::before {
-    background-image: url("data:image/svg+xml,%3Csvg width='17' height='16' viewBox='0 0 17 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.78125' y='0.5' width='15' height='15' stroke='%2300B2FF'/%3E%3Cpath d='M4.9873 6.66667L7.99907 10L12.5167 5' stroke='%2300B2FF'/%3E%3C/svg%3E");
+    background-image: url("../img/form-ok.svg");
   }
 
-  &:checked:disabled + label::before {
-    opacity: 0.2;
+  &:checked:disabled + label {
+    opacity: 0.5;
   }
 }
 
@@ -161,12 +171,18 @@
   position: relative;
   cursor: pointer;
 
-  &:hover,
-  &:focus {
-    color: $black;
-  }
+  // &:hover,
+  // &:focus {
+  //   color: $black;
+  // }
 
-  &:active {
-    color: $blue;
-  }
+  // &:active {
+  //   color: $blue;
+  // }
+}
+
+.form__agreement span {
+  display: inline-block;
+  vertical-align: top;
+  width: 9px;
 }

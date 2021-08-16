@@ -4,10 +4,6 @@
   @media (max-width: $tablet-max-width) {
     padding: 0 25px 0 15px;
   }
-
-  @media (max-width: $mobile-max-width) {
-    padding: 0 15px;
-  }
 }
 
 .our-office h2 {
@@ -19,31 +15,7 @@
   text-transform: uppercase;
 
   @media (max-width: $mobile-max-width) {
-    margin-bottom: 32px;
-    position: relative;
-
-    &::before,
-    &::after {
-      position: absolute;
-      content: "";
-      width: 16px;
-      height: 1px;
-      background-color: $footer-cross;
-      top: 8px;
-      right: 2px;
-    }
-
-    &:hover::before,
-    &:focus::before,
-    &:hover::after,
-    &:focus::after {
-      background-color: $black;
-    }
-
-    &:active::before,
-    &:active::after {
-      background-color: $white;
-    }
+    margin-bottom: 7px;
   }
 }
 
@@ -54,6 +26,7 @@
 
   @media (max-width: $mobile-max-width) {
     padding-right: 10px;
+    transition: 0.5s ease-in-out;
   }
 }
 

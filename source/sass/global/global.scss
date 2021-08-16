@@ -18,6 +18,10 @@ body {
   font-family: "PT Mono", "Courier New", monospace;
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 img {
   max-width: 100%;
   height: auto;

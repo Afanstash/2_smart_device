@@ -1,11 +1,10 @@
 .header {
-  padding-top: 31px;
-  min-height: 878px;
+  padding: 31px 0;
   color: $white;
   background-color: $background;
   background-image: url("../img/background-header.png");
   background-repeat: no-repeat;
-  background-position: -14px 1px;
+  background-position: -18px 0;
   background-size: cover;
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
@@ -14,7 +13,6 @@
 
   @media (max-width: $tablet-max-width) {
     padding-top: 20px;
-    min-height: 686px;
     background-image: url("../img/background-header-tablet.png");
     background-position: 0 0;
 
@@ -25,7 +23,6 @@
 
   @media (max-width: $mobile-max-width) {
     padding-top: 16px;
-    min-height: 647px;
     background-image: url("../img/background-header-mobile.png");
 
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
@@ -43,6 +40,10 @@
   margin-left: 78px;
   flex: 0 0 202px;
 
+  &--for-index-html {
+    cursor: default;
+  }
+
   @media (max-width: $tablet-max-width) {
     margin-left: 25px;
   }
@@ -53,33 +54,44 @@
   }
 }
 
+.header__logo-link img {
+  height: 52px;
+
+  @media (max-width: $mobile-max-width) {
+    height: 38px;
+  }
+}
+
 .header__contacts {
   flex: 1 1 auto;
   align-self: center;
-  margin-left: 20px;
+  margin-left: 50px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
 
 .header__contacts-wrap {
+  margin-top: 5px;
   margin-right: 28px;
   flex: 0 1 452px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
 
   @media (max-width: $tablet-max-width) {
     flex-basis: auto;
-    margin-right: 25px;
+    margin-right: 10px;
   }
 
   @media (max-width: $mobile-max-width) {
-    margin: 0;
+    margin: 5px 0 0 0;
   }
 }
 
 .header__contacts-mail {
+  margin-bottom: 5px;
   margin-top: 2px;
   margin-right: 20px;
 
@@ -101,13 +113,10 @@
 }
 
 .header__contacts-phone {
+  margin-bottom: 5px;
   margin-right: 20px;
 
   @media (max-width: $tablet-max-width) {
-    margin-right: 0;
-  }
-
-  @media (max-width: $mobile-max-width) {
     margin-right: 15px;
   }
 }
@@ -127,7 +136,7 @@
 
   &:hover,
   &:focus {
-    color: $black;
+    color: $blue;
   }
 
   &:active {
@@ -153,8 +162,10 @@
 
 .header__contacts-call-link {
   @include button(14px, 16px, transparent, $white);
+  flex: 0 0 180px;
+  align-self: flex-start;
   margin-right: 82px;
-  padding: 14px 26px 13px 26px;
+  padding: 14px 15px 13px;
   flex-shrink: 1;
   border: 1px solid $white;
 

@@ -1,9 +1,15 @@
 .socials-list {
   @include off-list;
+  margin-top: 49px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+
+  @media (max-width: $tablet-max-width) {
+    margin-top: 0;
+  }
 }
+
 
 .socials-list__item {
   margin: 0 15px 5px 0;
