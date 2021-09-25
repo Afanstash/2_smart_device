@@ -170,15 +170,7 @@
   display: block;
   position: relative;
   cursor: pointer;
-
-  // &:hover,
-  // &:focus {
-  //   color: $black;
-  // }
-
-  // &:active {
-  //   color: $blue;
-  // }
+  user-select: none;
 }
 
 .form__agreement span {
