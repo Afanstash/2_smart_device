@@ -28,6 +28,7 @@
   border: 1px solid $advantages-border;
   border-left: 3px solid $blue;
   min-height: 299px;
+  fill: $blue;
 
   &:hover,
   &:focus {
@@ -35,7 +36,12 @@
     background-color: $blue;
     color: $white;
     cursor: pointer;
-    fill: $black;
+  }
+
+  &:hover svg,
+  &:focus svg {
+    opacity: 1;
+    fill: $white;
   }
 
   @media (max-width: $tablet-max-width) {

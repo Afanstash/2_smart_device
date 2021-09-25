@@ -896,13 +896,17 @@ a {
   background-color: white;
   border: 1px solid #ebebeb;
   border-left: 3px solid #00b2ff;
-  min-height: 299px; }
+  min-height: 299px;
+  fill: #00b2ff; }
   .advantages__item:hover, .advantages__item:focus {
     border-color: #00b2ff;
     background-color: #00b2ff;
     color: white;
-    cursor: pointer;
-    fill: black; }
+    cursor: pointer; }
+  .advantages__item:hover svg,
+  .advantages__item:focus svg {
+    opacity: 1;
+    fill: white; }
   @media (max-width: 1023px) {
     .advantages__item {
       padding: 21px 21px 5px 24px;
